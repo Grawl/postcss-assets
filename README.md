@@ -207,7 +207,7 @@ Full list of functions
 
 Option | Description | Example result
 ---|---|---
- `width(path[, density])`  | Get width of an image | `160px`
+ `width(path[, density])` | Get width of an image | `160px`
 `height(path[, density])` | Get width of an image | `120px`
-`size(path[, density])`   | Get width and height of an image separated by space | `160px 120px`
-`inline(path)`            | Inline a file to a stylesheet in Base64 encoding | `url('data:image/png;base64,…')`
+`size(path[, density])` | Get width and height of an image separated by space | `160px 120px`
+`inline(path)` | Inline a file to a stylesheet in Base64 encoding | `url('data:image/png;base64,…')`
