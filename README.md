@@ -154,6 +154,18 @@ var options = {
 };
 ```
 
+Full list of options
+--------------------
+
+| Option           | Description                                                                       | Default |
+|:-----------------|:----------------------------------------------------------------------------------|:--------|
+| `basePath`       | Root directory of the project.                                                    | `.`     |
+| `baseUrl`        | URL of the project when running the web server.                                   | `/`     |
+| `cachebuster`    | If cache should be busted. Pass a function to define custom busting strategy.     | `false` |
+| `loadPaths`      | Specific directories to look for the files.                                       | `[]`    |
+| `relativeTo`     | Directory to relate to when resolving URLs. When `false`, disables relative URLs. | `false` |
+
+
 Image dimensions
 ----------------
 
@@ -190,13 +202,12 @@ body {
 
 SVG files would be inlined unencoded, because [then they benefit in size](http://css-tricks.com/probably-dont-base64-svg/).
 
-Full list of options
+Full list of functions
 --------------------
 
-| Option           | Description                                                                       | Default |
-|:-----------------|:----------------------------------------------------------------------------------|:--------|
-| `basePath`       | Root directory of the project.                                                    | `.`     |
-| `baseUrl`        | URL of the project when running the web server.                                   | `/`     |
-| `cachebuster`    | If cache should be busted. Pass a function to define custom busting strategy.     | `false` |
-| `loadPaths`      | Specific directories to look for the files.                                       | `[]`    |
-| `relativeTo`     | Directory to relate to when resolving URLs. When `false`, disables relative URLs. | `false` |
+Option | Description | Example result
+---|---|---
+ `width(path[, density])`  | Get width of an image | `160px`
+`height(path[, density])` | Get width of an image | `120px`
+`size(path[, density])`   | Get width and height of an image separated by space | `160px 120px`
+`inline(path)`            | Inline a file to a stylesheet in Base64 encoding | `url('data:image/png;base64,…')`
